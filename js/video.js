@@ -12,7 +12,7 @@ window.addEventListener("load", function() {
 //play the video update volume information
 document.querySelector("#play").addEventListener("click", function() {
     video.play();
-    video.textContent = video.volume * 100 + "%";
+    document.querySelector("#volume").textContent = video.volume * 100 + "%";
     console.log("Play Video");
 });
 
@@ -59,7 +59,7 @@ document.querySelector("#mute").addEventListener("click", function() {
 //change the volume to match the slider (in percentage) and update the volume information
 document.querySelector("#slider").addEventListener("input", function() {
     video.volume = this.value / 100;
-    video.textContent = video.volume * 100 + "%";
+    document.querySelector("#volume").textContent = video.volume * 100 + "%";
 });
 
 //use oldSchool class on the video element
