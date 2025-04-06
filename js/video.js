@@ -45,13 +45,14 @@ document.querySelector("#skip").addEventListener("click", function() {
 
 //mute the video 
 document.querySelector("#mute").addEventListener("click", function() {
+    video.muted = !video.muted;
     if(video.muted == True){
-        video.muted = False;
-        console.log("Unmute Video");
+        this.textContent = "Unmute"
+        console.log("Muted Video");
     }
     else{
-        video.muted = True;
-        console.log("Mute Video");
+        this.textContent = "Mute"
+        console.log("Unmute Video");
     }
 });
 
